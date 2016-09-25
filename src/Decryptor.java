@@ -35,26 +35,61 @@ public class Decryptor {
         for (int cipher: ciphers) {
             int ch = cipher >> 4;
             int cl = cipher & 15;
-            //System.out.print(Integer.toHexString(cipher)+","+Integer.toHexString(ch)+","+Integer.toHexString(cl)+"     ");
+            System.out.print(Integer.toHexString(cipher)+","+Integer.toHexString(ch)+","+Integer.toHexString(cl)+"     ");
             //ch <- map [ ph ] [ kl ]
             //cl <- map [ pl ] [ kh ]
-            decryptMap.getCombi(ch);
-            decryptMap.getCombi(cl);
+            ArrayList<Integer> chcombi = decryptMap.getCombi(ch);
+            ArrayList<Integer> clcombi = decryptMap.getCombi(cl);
+
+            getPlain(chcombi,clcombi);
 
 
-            //System.out.print("\n");
+            System.out.print("{");
+            for(int i: chcombi) {
+                System.out.print(Integer.toHexString(i)+",");
+            }
+            System.out.print("}");
+
+
+            //decryptMap.getCombi(cl);
+            /*
+            System.out.print("{");
+            for(int i: clcombi) {
+                System.out.print(Integer.toHexString(i)+",");
+            }
+            System.out.print("}");
+
+            */
+            System.out.print("\n");
+            break;
         }
     }
-    // todo: find key or plaintext firstly? Prefer plaintext that can be checked printable
-    private ArrayList<Integer> getPlain() {
-        return null;
+
+    private ArrayList<Integer> getPlain(ArrayList<Integer> chcombi, ArrayList<Integer> clcombi) {
+        ArrayList<Integer> plainlist = new ArrayList<>();
+        ArrayList<Integer> keylist = new ArrayList<>();
+        int p,k;
+        for (int chc: chcombi) {
+            for (int clc: clcombi) {
+                p = chc&0xf0 | (clc>>4);
+                k = (clc&0x0f)<<4 | (chc&0x0f);
+                if (isPrintable(p)&& (isPrintable(k)||isNonPrintable(k))) {
+                    plainlist.add(p);
+                    keylist.add(k);
+                    System.out.print("["+(char)p+" "+k+"]");
+                }
+            }
+        }
+        System.out.print("size = "+plainlist.size());
+        return plainlist;
     }
 
-    private ArrayList<Integer> getKey() {
-        return null;
-    }
 
     private boolean isPrintable(int text) {
         return (text > 31) && (text < 128);
+    }
+
+    private boolean isNonPrintable(int text) {
+        return text < 32;
     }
 }
