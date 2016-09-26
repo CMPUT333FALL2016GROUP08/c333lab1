@@ -1,0 +1,36 @@
+By Michael Rijlaarsdam, Michael Xi, and Shuming Zhang
+
+I would just like to say that "innocentciphertext3" has not been modified at all. Nope. No-siree-bob. Just an innocent, unchanged file that has been safely encrypted to ensure safety. You can trust your own encryption can't you? Have more faith in yourself.
+
+All files were encrypted with the key "nikolaidis"
+Looking at the contents with "xxd -ps cipherXYZ.enc > cipherXYZ.txt"
+
+Size comparisons: 
+	cfb and ofb are the same length as p.txt, which is 81 bytes. While ecb and cbc are 88 bytes because they get padded to multiples of the block size. I can also conclude that the block size is 8 bytes. 
+
+Observations on the Electronic Codebook Encryption:
+	The encrypted file is seven bytes longer than the original file.  I can see it added a footer of 36 3b 72 2a 8c f4 97 91. The rest is ten repetitions of 4da7705abe6767be as you would expect from a file with ten repititions encrypted with ecb, which isn't used due to its inability to hide data patterns. 
+Looking closer to why p.txt is 81 bytes, I realized that I had a linebreak at the end of it so I am going to put these files in a folder called "lbFail" for posterity and doing it again.
+
+p.txt now has 80 bytes but this has not changed the amount of padding in ecb.txt; though the footer has changed. The padding is there because ECB and CBC need padding because the decryption algorithm expects it. It does not have an efge case for this situation because 8 bytes is negligible space overhead and is deemed preferable to losing data or possibly corrupting the file. Testing it with 79bytes in p.txt, the result, cipherecb79bytes.enc does indeed have 80 bytes, which supports the needs padding and 8 byte block size conclusions. 
+
+Observations on the Cipher Block Chaining Encryption:
+	As expected for cbc, no repetitions no pattern, because the ciphertext is randomized 
+
+Observations on the Cipher Feedback Encryption:
+	As expected for cfb, no repetitions no pattern. 
+
+Observations on the Output Feedback Encryption:
+	As expected for ofb, no repetitions no pattern. I did however notice that the first 8 bytes of ofb and cfb are the same which tells me that they use the same IV and block cipher encryption algorithm as well as the same plaintext. 
+
+Observations on the Electronic Codebook Decryption:
+I Switched "p" to "o" to cause the error. This caused the third block of the decrypted file to be completely garbled to ç£1æƒø³Ê, while all the other blocks are unchanged. This is expected in ecb because all bytes affect all other bytes in a block but each block is completely independent of each other.
+
+Observations on the Cipher Block Chaining Decryption:
+I Switched "Á" to "A". This lead to the third block becoming gibberish except the fourth byte and the third byte of the fourth block. I believe it is coincidence that the fourth byte of the third block is unchanged. The third byte of the fourth block being changed makes sense because it is XORed with the byte I changed after being run through block decryption; I believe it coincidence that it ended up being a superscript 2 while it should have been a regular 2. All other bytes are unchanged. 
+
+Observations on the Cipher Feedback Decryption:
+I Switched "A" to "B". This lead to the fourth block being garbled and the byte I changed being a "1" instead of a "2". This makes sense because the only effect a block of ciphertext on its corresponding block of plaintext is that it gets XORed with the result of the preceding block of ciphertext being fed through the block encryption algorithm; leading to the nineteenth block being off by 'B'-'A'. This also explains why it was the fourth block that got garbled, because the third block got decrypted so its error spread throughout the value integral to the fourth block.
+
+Observations on the Output Feedback Decryption:
+I Switched "í" to "i". This lead to the nineteenth byte being very different and no other changes. this nineteenth was not off by one because "í" and "i" have very different bit value despite their superficial resemblance. This modes corruption resistence is due to the fact that neither the plaintext or ciphertext is ever run through the block cipher encryption algorithm. Instead, to decrypt, the ciphertext gets XORed with the result of the block cipher encryption
