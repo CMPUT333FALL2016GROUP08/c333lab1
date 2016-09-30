@@ -20,11 +20,8 @@ public class KeyFinder {
         }
 
         int cipherLength=keyFinder.cipherLength(ciphertext);
-        //System.out.print(ciphertext+"\n");
         keyFinder.displace(displacedCipher);
-        //System.out.print(ciphertext+"\n");
-        //System.out.print(displacedCipher+"\n");
-        System.out.print(keyFinder.compareArray(ciphertext,displacedCipher)+"\n");
+
     }
 
     private static int cipherLength(ArrayList<Integer> cipher){
