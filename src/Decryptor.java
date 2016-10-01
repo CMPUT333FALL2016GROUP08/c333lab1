@@ -32,8 +32,8 @@ public class Decryptor {
         Decryptor decryptor = new Decryptor();
 
         if (args.length != 0) {
-            ArrayList<Integer> cipher1 = fileReader.read(args[0]);
-            decryptor.decrypt(cipher1);
+            ArrayList<Integer> cipher = fileReader.read(args[0]);
+            decryptor.decrypt(cipher);
             if (args[1].equals("1")) {
                 if (args.length == 4) {
                     decryptor.findWord(args[2], Integer.parseInt(args[3]));
@@ -42,7 +42,11 @@ public class Decryptor {
                 }
             }
             if (args[1].equals("2")) {
-                decryptor.decipher(cipher1, decryptor.toIntArray(args[2]));
+                decryptor.decipher(cipher, decryptor.toIntArray(args[2]));
+            }
+            if (args[1].equals("3")) {
+                //ciphertext2's key is composed of printable characters
+                decryptor.possibleKey(cipher, decryptor.hexToIntArray(args[2]));
             }
         }
 
@@ -112,14 +116,48 @@ public class Decryptor {
         }
     }
 
+    //for testing for fileheaders
+    private void possibleKey(ArrayList<Integer> ciphers, int[] plain) {
+        char [] key = new char[plain.length];
+        char tmp;
+        for (int i = 0; i < plain.length; i++) {
+            if ((tmp = decryptMap.getKey(ciphers.get(i), plain[i]))!=0){
+                key[i]=tmp;
+            }else{
+                System.out.println("Not possible");
+                return;
+            }
+        }
+
+        System.out.print(key);
+    }
+
     private int[] toIntArray(String input) {
         ArrayList<Integer> al = new ArrayList<>();
+        //return input as an array of Strings split on",(any number of whitespace charatcers)"
+        //  parse each string into an int
         for (String s: input.substring(1,input.length()-1).split(",\\s*")) {
             al.add(Integer.parseInt(s));
         }
+        //change ArrayList<Integer> to int[]
         int[] il = new int[al.size()];
         for (int i = 0; i<al.size(); i++) {
             il[i] = al.get(i);
+        }
+        return il;
+    }
+
+    private int[] hexToIntArray(String input) {
+        ArrayList<Integer> al = new ArrayList<>();
+        //return input as an array of Strings split on"(any number of whitespace charatcers)"
+        //  parse each string into an int
+        for (String s: input.substring(1,input.length()-1).split(",\\s*")) {
+           al.add(Integer.parseInt(s,16));
+        }
+        //change ArrayList<Integer> to int[]
+        int[] il = new int[al.size()];
+        for (int i = 0; i<al.size(); i++) {
+            il[i] = al.get(i).intValue();
         }
         return il;
     }
