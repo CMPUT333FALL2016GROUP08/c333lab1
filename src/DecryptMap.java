@@ -41,7 +41,9 @@ public class DecryptMap {
         ArrayList<Integer> plainlist = new ArrayList<>();
         ArrayList<Integer> keylist = new ArrayList<>();
         int p,k;
+        //shift ch into the lower 4 bits of a new int
         int ch = cipher >> 4;
+        //remove ch
         int cl = cipher & 15;
 
         for (int chc: getCombi(ch)) {
@@ -60,7 +62,7 @@ public class DecryptMap {
         return result;
     }
 
-    private boolean isPrintable(int text) {
+    public boolean isPrintable(int text) {
         return (text > 31) && (text < 128);
     }
 
