@@ -27,22 +27,5 @@ public class FileReader {
         }
         return ciphers;
     }
-
-    // function modified from https://www.mkyong.com/java/how-to-convert-file-into-an-array-of-bytes/
-    public byte[] readByte(String filename) {
-        byte[] bFile=new byte[(int) filename.length()];
-        try {
-            //convert file into array of bytes
-            URL resource = ClassLoader.getSystemResource(filename);
-            File file = new File(resource.toURI());
-            //InputStream inputStream = new FileInputStream(getClass().getResource(filename).getPath());
-            Path path=file.toPath();
-            bFile = Files.readAllBytes(path);
-        } catch (Exception e){
-            System.out.print("Exception");
-        }
-
-        System.out.print(bFile.length);
-        return bFile;
-    }
+    
 }
