@@ -62,7 +62,7 @@ public class DecryptMap {
         return result;
     }
 
-    public  static boolean isPrintable(int text) {
+    public boolean isPrintable(int text) {
         return (text > 31) && (text < 128);
     }
 
