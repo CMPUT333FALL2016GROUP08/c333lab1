@@ -142,7 +142,7 @@ public class Decryptor {
         for (int i = 0; i < plain.length; i++) {
 
             kh=kl=0;
-            ph = plaiqn[i]>>4;
+            ph = plain[i]>>4;
             pl = plain[i]&0x0f;
             ch = ciphers.get(i)>>4;
             cl = ciphers.get(i)&0x0f;
