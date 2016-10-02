@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class Decryptor {
@@ -46,9 +47,17 @@ public class Decryptor {
             }
             if (args[1].equals("3")) {
                 //ciphertext2's key is composed of printable characters
+
                 decryptor.possibleKey(cipher, decryptor.hexToIntArray(args[2]));
+                System.out.println("args3 "+args[3]);
+                System.out.println("args2 "+args[2]);
+            }
+            if (args[1].equals("4")){
+
             }
         }
+
+
 
         /*
         ArrayList<Integer> cipher1 = fileReader.read("ciphertext1");
@@ -118,18 +127,56 @@ public class Decryptor {
 
     //for testing for fileheaders
     private void possibleKey(ArrayList<Integer> ciphers, int[] plain) {
-        char [] key = new char[plain.length];
-        char tmp;
+        boolean possible=true;
+        int [] key = new int[plain.length];
+        int ph, pl, kh, kl, ch, cl;
+        int res;
+
+
+        //System.out.println("plain.length= "+plain.length);
         for (int i = 0; i < plain.length; i++) {
-            if ((tmp = decryptMap.getKey(ciphers.get(i), plain[i]))!=0){
-                key[i]=tmp;
-            }else{
-                System.out.println("Not possible");
-                return;
+            possible=true;
+
+            kh=kl=0;
+            ph = plain[i]>>4;
+            pl = plain[i]&0x0f;
+            ch = ciphers.get(i)>>4;
+            cl = ciphers.get(i)&0x0f;
+            for (int j=0; j<16;++j){
+                if(map[ph][j] == ch) kl = j;
+                if(map[pl][j] == cl) kh = j;
+
+            }
+            //System.out.print("Plain[i]= "+plain[i]+", ciphers.get(i) = "+ciphers.get(i)+" results in ");
+            //System.out.print(""+(kh<<4)+"+"+kl+"= ");
+
+            //cast converts to ascii
+            res = ((kh<<4)+kl);
+            System.out.print((char)res);
+            if(!DecryptMap.isPrintable(res))possible = false;
+
+        }
+        if (!possible)System.out.println("    Is not possible");
+
+        /*
+    //returns 0 if key character is not printable
+    public int getKey(int cipher, int plain) {
+        int kh = 0,kl = 0;
+        for (int chc: chcombi) {
+            if ((chc&15)==(plain>>4)){
+                kl = chc>>4;
             }
         }
+        for (int clc: clcombi) {
+            if ((clc&15)==(plain&15))  {
+                kh = clc>>4;
+            }
+        }
+        char ret = (char) ((kh<<4)|kl);
+        if (isPrintable(ret))return ret;
+        return 0;
+    }*/
 
-        System.out.print(key);
     }
 
     private int[] toIntArray(String input) {
@@ -151,13 +198,13 @@ public class Decryptor {
         ArrayList<Integer> al = new ArrayList<>();
         //return input as an array of Strings split on"(any number of whitespace charatcers)"
         //  parse each string into an int
-        for (String s: input.substring(1,input.length()-1).split(",\\s*")) {
-           al.add(Integer.parseInt(s,16));
+        for (String s: input.substring(1,input.length()-1).split(" \\s*")) {
+            if (s!="")al.add(Integer.parseInt(s,16));
         }
         //change ArrayList<Integer> to int[]
         int[] il = new int[al.size()];
         for (int i = 0; i<al.size(); i++) {
-            il[i] = al.get(i).intValue();
+            il[i] = al.get(i);
         }
         return il;
     }
