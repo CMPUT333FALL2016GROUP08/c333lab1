@@ -65,6 +65,10 @@ public class Decryptor {
         }
 
 
+        int kl;
+        for(int i = 12; i<3055616; i++){
+            if (3055616%i==12) System.out.println(i);
+        }
 
         /*
         ArrayList<Integer> cipher1 = fileReader.read("ciphertext1");

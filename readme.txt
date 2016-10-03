@@ -29,5 +29,5 @@ SOI   EXIF  ascii 'E''x''i''f'?? ?? tiff            >= 8       >0   descr  ascii
     SPIFF=8 NUL                     MMorder         even     4 6 7                               26.d                              makes it 0
                                                              9 b 12  \__________TIFF Tag 1_____________/  \__________TIFF Tag 2_____________/
 
-5  3  .  5  [  %  5  6  3  N  ,  -  1  1  3  .  5  2  8  9  d  W  E 3  .  
+5  3  .  5  [  %  5  6  3  N  ,  -  1  1  3  .  5  2  8  9  d  W  E 3  .
 
