@@ -98,6 +98,7 @@ public class Decryptor {
     private void findWord(String word, int times) {
         int wordlength = word.length();
         Map<ArrayList<Integer>,Integer> keyOccu = new HashMap<>();
+        Map<ArrayList<Integer>,ArrayList<Integer>> keyIndex = new HashMap<>();
         int find = 0;
         for (int textindex = 0; textindex < textlength; textindex++) {
             if (plaincombi.get(textindex).contains((int)word.charAt(0))) {
@@ -116,8 +117,12 @@ public class Decryptor {
                 if (find==1) {
                     if (keyOccu.containsKey(key)) {
                         keyOccu.replace(key,keyOccu.get(key),keyOccu.get(key)+1);
+                        keyIndex.get(key).add(textindex);
                     } else {
                         keyOccu.put(key,1);
+                        ArrayList<Integer> startindex = new ArrayList<>();
+                        startindex.add(textindex);
+                        keyIndex.put(key,startindex);
                     }
                     //System.out.print(key+"\n");
                 }
@@ -125,7 +130,8 @@ public class Decryptor {
         }
         for (ArrayList<Integer> key: keyOccu.keySet()) {
             if (keyOccu.get(key) >= times) {
-                System.out.println(key+" "+keyOccu.get(key));
+                System.out.print(key+" "+keyOccu.get(key)+" ");
+                System.out.println(keyIndex.get(key));
             }
         }
     }
