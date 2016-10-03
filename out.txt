@@ -1,0 +1,233 @@
+Enter the file signature, q to quit
+4D 2D 57 20 50 6F 63 6B
+Plain[0]= 77, ciphers.get(0) = 86 results in 80+0= 80 = P
+Plain[1]= 45, ciphers.get(1) = 248 results in 224+14= 238 = î
+Plain[2]= 87, ciphers.get(2) = 215 results in 0+4= 4 = 
+Plain[3]= 32, ciphers.get(3) = 74 results in 160+1= 161 = ¡
+Plain[4]= 80, ciphers.get(4) = 130 results in 112+2= 114 = r
+Plain[5]= 111, ciphers.get(5) = 22 results in 48+15= 63 = ?
+Plain[6]= 99, ciphers.get(6) = 185 results in 16+3= 19 = 
+Plain[7]= 107, ciphers.get(7) = 40 results in 128+1= 129 = ?
+    Is not possible
+65 74 20 44 69 63 74 69
+Plain[0]= 101, ciphers.get(0) = 86 results in 144+14= 158 = ?
+Plain[1]= 116, ciphers.get(1) = 248 results in 112+15= 127 = 
+Plain[2]= 32, ciphers.get(2) = 215 results in 16+11= 27 = 
+Plain[3]= 68, ciphers.get(3) = 74 results in 96+15= 111 = o
+Plain[4]= 105, ciphers.get(4) = 130 results in 32+5= 37 = %
+Plain[5]= 99, ciphers.get(5) = 22 results in 112+15= 127 = 
+Plain[6]= 116, ciphers.get(6) = 185 results in 128+8= 136 = ?
+Plain[7]= 105, ciphers.get(7) = 40 results in 96+1= 97 = a
+    Is not possible
+4D 53 57 49 4D
+Plain[0]= 77, ciphers.get(0) = 86 results in 80+0= 80 = P
+Plain[1]= 83, ciphers.get(1) = 248 results in 0+7= 7 = 
+Plain[2]= 87, ciphers.get(2) = 215 results in 0+4= 4 = 
+Plain[3]= 73, ciphers.get(3) = 74 results in 80+15= 95 = _
+Plain[4]= 77, ciphers.get(4) = 130 results in 160+7= 167 = §
+    Is not possible
+4D 69 63 72 6F 73 6F 66
+Plain[0]= 77, ciphers.get(0) = 86 results in 80+0= 80 = P
+Plain[1]= 105, ciphers.get(1) = 248 results in 96+10= 106 = j
+Plain[2]= 99, ciphers.get(2) = 215 results in 96+7= 103 = g
+Plain[3]= 114, ciphers.get(3) = 74 results in 128+2= 130 = ?
+Plain[4]= 111, ciphers.get(4) = 130 results in 128+5= 133 = ?
+Plain[5]= 115, ciphers.get(5) = 22 results in 112+4= 116 = t
+Plain[6]= 111, ciphers.get(6) = 185 results in 208+3= 211 = Ó
+Plain[7]= 102, ciphers.get(7) = 40 results in 80+1= 81 = Q
+    Is not possible
+74 20 43 2F 43 2B 2B 20
+Plain[0]= 116, ciphers.get(0) = 86 results in 224+3= 227 = ã
+Plain[1]= 32, ciphers.get(1) = 248 results in 176+14= 190 = ¾
+Plain[2]= 67, ciphers.get(2) = 215 results in 96+9= 105 = i
+Plain[3]= 47, ciphers.get(3) = 74 results in 176+1= 177 = ±
+Plain[4]= 67, ciphers.get(4) = 130 results in 192+7= 199 = Ç
+Plain[5]= 43, ciphers.get(5) = 22 results in 240+3= 243 = ó
+Plain[6]= 43, ciphers.get(6) = 185 results in 144+7= 151 = ?
+Plain[7]= 32, ciphers.get(7) = 40 results in 176+5= 181 = µ
+    Is not possible
+4D 69 63 72 6F 73 6F 66
+Plain[0]= 77, ciphers.get(0) = 86 results in 80+0= 80 = P
+Plain[1]= 105, ciphers.get(1) = 248 results in 96+10= 106 = j
+Plain[2]= 99, ciphers.get(2) = 215 results in 96+7= 103 = g
+Plain[3]= 114, ciphers.get(3) = 74 results in 128+2= 130 = ?
+Plain[4]= 111, ciphers.get(4) = 130 results in 128+5= 133 = ?
+Plain[5]= 115, ciphers.get(5) = 22 results in 112+4= 116 = t
+Plain[6]= 111, ciphers.get(6) = 185 results in 208+3= 211 = Ó
+Plain[7]= 102, ciphers.get(7) = 40 results in 80+1= 81 = Q
+    Is not possible
+74 20 56 69 73 75 61 6C
+Plain[0]= 116, ciphers.get(0) = 86 results in 224+3= 227 = ã
+Plain[1]= 32, ciphers.get(1) = 248 results in 176+14= 190 = ¾
+Plain[2]= 86, ciphers.get(2) = 215 results in 176+4= 180 = ´
+Plain[3]= 105, ciphers.get(3) = 74 results in 80+13= 93 = ]
+Plain[4]= 115, ciphers.get(4) = 130 results in 192+10= 202 = Ê
+Plain[5]= 117, ciphers.get(5) = 22 results in 144+4= 148 = ?
+Plain[6]= 97, ciphers.get(6) = 185 results in 80+3= 83 = S
+Plain[7]= 108, ciphers.get(7) = 40 results in 240+1= 241 = ñ
+    Is not possible
+20 53 74 75 64 69 6F 20
+Plain[0]= 32, ciphers.get(0) = 86 results in 32+2= 34 = "
+Plain[1]= 83, ciphers.get(1) = 248 results in 0+7= 7 = 
+Plain[2]= 116, ciphers.get(2) = 215 results in 208+12= 220 = Ü
+Plain[3]= 117, ciphers.get(3) = 74 results in 16+2= 18 = 
+Plain[4]= 100, ciphers.get(4) = 130 results in 48+5= 53 = 5
+Plain[5]= 105, ciphers.get(5) = 22 results in 208+15= 223 = ß
+Plain[6]= 111, ciphers.get(6) = 185 results in 208+3= 211 = Ó
+Plain[7]= 32, ciphers.get(7) = 40 results in 176+5= 181 = µ
+    Is not possible
+53 6F 6C 75 74 69 6F 6E
+Plain[0]= 83, ciphers.get(0) = 86 results in 112+11= 123 = {
+Plain[1]= 111, ciphers.get(1) = 248 results in 192+10= 202 = Ê
+Plain[2]= 108, ciphers.get(2) = 215 results in 80+7= 87 = W
+Plain[3]= 117, ciphers.get(3) = 74 results in 16+2= 18 = 
+Plain[4]= 116, ciphers.get(4) = 130 results in 48+10= 58 = :
+Plain[5]= 105, ciphers.get(5) = 22 results in 208+15= 223 = ß
+Plain[6]= 111, ciphers.get(6) = 185 results in 208+3= 211 = Ó
+Plain[7]= 110, ciphers.get(7) = 40 results in 208+1= 209 = Ñ
+    Is not possible
+20 46 69 6C 65
+Plain[0]= 32, ciphers.get(0) = 86 results in 32+2= 34 = "
+Plain[1]= 70, ciphers.get(1) = 248 results in 80+12= 92 = \
+Plain[2]= 105, ciphers.get(2) = 215 results in 192+7= 199 = Ç
+Plain[3]= 108, ciphers.get(3) = 74 results in 224+13= 237 = í
+Plain[4]= 101, ciphers.get(4) = 130 results in 224+5= 229 = å
+    Is not possible
+4E 41 56 54 52 41 46 46
+Plain[0]= 78, ciphers.get(0) = 86 results in 64+0= 64 = @
+Plain[1]= 65, ciphers.get(1) = 248 results in 64+12= 76 = L
+Plain[2]= 86, ciphers.get(2) = 215 results in 176+4= 180 = ´
+Plain[3]= 84, ciphers.get(3) = 74 results in 96+10= 106 = j
+Plain[4]= 82, ciphers.get(4) = 130 results in 80+2= 82 = R
+Plain[5]= 65, ciphers.get(5) = 22 results in 176+1= 177 = ±
+Plain[6]= 70, ciphers.get(6) = 185 results in 96+5= 101 = e
+Plain[7]= 70, ciphers.get(7) = 40 results in 80+3= 83 = S
+    Is not possible
+50 49 43 54 00 08
+Plain[0]= 80, ciphers.get(0) = 86 results in 32+11= 43 = +
+Plain[1]= 73, ciphers.get(1) = 248 results in 96+12= 108 = l
+Plain[2]= 67, ciphers.get(2) = 215 results in 96+9= 105 = i
+Plain[3]= 84, ciphers.get(3) = 74 results in 96+10= 106 = j
+Plain[4]= 0, ciphers.get(4) = 130 results in 112+11= 123 = {
+Plain[5]= 8, ciphers.get(5) = 22 results in 160+5= 165 = ¥
+    Is not possible
+50 4B 03 04
+Plain[0]= 80, ciphers.get(0) = 86 results in 32+11= 43 = +
+Plain[1]= 75, ciphers.get(1) = 248 results in 128+12= 140 = ?
+Plain[2]= 3, ciphers.get(2) = 215 results in 96+13= 109 = m
+Plain[3]= 4, ciphers.get(3) = 74 results in 96+3= 99 = c
+    Is not possible
+50 4B 03 04 0A 00 02 00
+Plain[0]= 80, ciphers.get(0) = 86 results in 32+11= 43 = +
+Plain[1]= 75, ciphers.get(1) = 248 results in 128+12= 140 = ?
+Plain[2]= 3, ciphers.get(2) = 215 results in 96+13= 109 = m
+Plain[3]= 4, ciphers.get(3) = 74 results in 96+3= 99 = c
+Plain[4]= 10, ciphers.get(4) = 130 results in 208+11= 219 = Û
+Plain[5]= 0, ciphers.get(5) = 22 results in 32+5= 37 = %
+Plain[6]= 2, ciphers.get(6) = 185 results in 160+9= 169 = ©
+Plain[7]= 0, ciphers.get(7) = 40 results in 176+7= 183 = ·
+    Is not possible
+50 4B 03 04 14 00 06 00
+Plain[0]= 80, ciphers.get(0) = 86 results in 32+11= 43 = +
+Plain[1]= 75, ciphers.get(1) = 248 results in 128+12= 140 = ?
+Plain[2]= 3, ciphers.get(2) = 215 results in 96+13= 109 = m
+Plain[3]= 4, ciphers.get(3) = 74 results in 96+3= 99 = c
+Plain[4]= 20, ciphers.get(4) = 130 results in 48+4= 52 = 4
+Plain[5]= 0, ciphers.get(5) = 22 results in 32+5= 37 = %
+Plain[6]= 6, ciphers.get(6) = 185 results in 96+9= 105 = i
+Plain[7]= 0, ciphers.get(7) = 40 results in 176+7= 183 = ·
+    Is not possible
+50 4B 03 04 14 00 08 00
+Plain[0]= 80, ciphers.get(0) = 86 results in 32+11= 43 = +
+Plain[1]= 75, ciphers.get(1) = 248 results in 128+12= 140 = ?
+Plain[2]= 3, ciphers.get(2) = 215 results in 96+13= 109 = m
+Plain[3]= 4, ciphers.get(3) = 74 results in 96+3= 99 = c
+Plain[4]= 20, ciphers.get(4) = 130 results in 48+4= 52 = 4
+Plain[5]= 0, ciphers.get(5) = 22 results in 32+5= 37 = %
+Plain[6]= 8, ciphers.get(6) = 185 results in 64+9= 73 = I
+Plain[7]= 0, ciphers.get(7) = 40 results in 176+7= 183 = ·
+    Is not possible
+08 00
+Plain[0]= 8, ciphers.get(0) = 86 results in 160+4= 164 = ¤
+Plain[1]= 0, ciphers.get(1) = 248 results in 176+0= 176 = °
+    Is not possible
+51 46 49 FB
+Plain[0]= 81, ciphers.get(0) = 86 results in 176+11= 187 = »
+Plain[1]= 70, ciphers.get(1) = 248 results in 80+12= 92 = \
+Plain[2]= 73, ciphers.get(2) = 215 results in 192+9= 201 = É
+Plain[3]= 251, ciphers.get(3) = 74 results in 112+4= 116 = t
+    Is not possible
+52 41 5A 41 54 44 42 31	
+Number format exception
+Plain[0]= 82, ciphers.get(0) = 86 results in 0+11= 11 = 
+Plain[1]= 65, ciphers.get(1) = 248 results in 64+12= 76 = L
+Plain[2]= 90, ciphers.get(2) = 215 results in 112+4= 116 = t
+Plain[3]= 65, ciphers.get(3) = 74 results in 48+15= 63 = ?
+Plain[4]= 84, ciphers.get(4) = 130 results in 48+2= 50 = 2
+Plain[5]= 68, ciphers.get(5) = 22 results in 224+1= 225 = á
+Plain[6]= 66, ciphers.get(6) = 185 results in 160+5= 165 = ¥
+    Is not possible
+52 49 46 46
+Plain[0]= 82, ciphers.get(0) = 86 results in 0+11= 11 = 
+Plain[1]= 73, ciphers.get(1) = 248 results in 96+12= 108 = l
+Plain[2]= 70, ciphers.get(2) = 215 results in 176+9= 185 = ¹
+Plain[3]= 70, ciphers.get(3) = 74 results in 64+15= 79 = O
+    Is not possible
+41 56 49 20 4C 49 53 54
+Plain[0]= 65, ciphers.get(0) = 86 results in 176+0= 176 = °
+Plain[1]= 86, ciphers.get(1) = 248 results in 80+7= 87 = W
+Plain[2]= 73, ciphers.get(2) = 215 results in 192+9= 201 = É
+Plain[3]= 32, ciphers.get(3) = 74 results in 160+1= 161 = ¡
+Plain[4]= 76, ciphers.get(4) = 130 results in 176+7= 183 = ·
+Plain[5]= 73, ciphers.get(5) = 22 results in 208+1= 209 = Ñ
+Plain[6]= 83, ciphers.get(6) = 185 results in 16+0= 16 = 
+Plain[7]= 84, ciphers.get(7) = 40 results in 112+14= 126 = ~
+    Is not possible
+52 49 46 46
+Plain[0]= 82, ciphers.get(0) = 86 results in 0+11= 11 = 
+Plain[1]= 73, ciphers.get(1) = 248 results in 96+12= 108 = l
+Plain[2]= 70, ciphers.get(2) = 215 results in 176+9= 185 = ¹
+Plain[3]= 70, ciphers.get(3) = 74 results in 64+15= 79 = O
+    Is not possible
+57 41 56 45 66 6D 74 20
+Plain[0]= 87, ciphers.get(0) = 86 results in 16+11= 27 = 
+Plain[1]= 65, ciphers.get(1) = 248 results in 64+12= 76 = L
+Plain[2]= 86, ciphers.get(2) = 215 results in 176+4= 180 = ´
+Plain[3]= 69, ciphers.get(3) = 74 results in 16+15= 31 = 
+Plain[4]= 102, ciphers.get(4) = 130 results in 16+5= 21 = 
+Plain[5]= 109, ciphers.get(5) = 22 results in 80+15= 95 = _
+Plain[6]= 116, ciphers.get(6) = 185 results in 128+8= 136 = ?
+Plain[7]= 32, ciphers.get(7) = 40 results in 176+5= 181 = µ
+    Is not possible
+57 45 42 50	
+Number format exception
+Plain[0]= 87, ciphers.get(0) = 86 results in 16+11= 27 = 
+Plain[1]= 69, ciphers.get(1) = 248 results in 32+12= 44 = ,
+Plain[2]= 66, ciphers.get(2) = 215 results in 240+9= 249 = ù
+    Is not possible
+
+Number format exception
+    Is possible!!!!
+52 61 72 21 1A 07 00	
+Number format exception
+Plain[0]= 82, ciphers.get(0) = 86 results in 0+11= 11 = 
+Plain[1]= 97, ciphers.get(1) = 248 results in 64+10= 74 = J
+Plain[2]= 114, ciphers.get(2) = 215 results in 240+12= 252 = ü
+Plain[3]= 33, ciphers.get(3) = 74 results in 48+1= 49 = 1
+Plain[4]= 26, ciphers.get(4) = 130 results in 208+4= 212 = Ô
+Plain[5]= 7, ciphers.get(5) = 22 results in 16+5= 21 = 
+    Is not possible
+53 43 4D 49	
+Number format exception
+Plain[0]= 83, ciphers.get(0) = 86 results in 112+11= 123 = {
+Plain[1]= 67, ciphers.get(1) = 248 results in 0+12= 12 = 
+Plain[2]= 77, ciphers.get(2) = 215 results in 64+9= 73 = I
+    Is not possible
+53 43 4D 49	
+Number format exception
+Plain[0]= 83, ciphers.get(0) = 86 results in 112+11= 123 = {
+Plain[1]= 67, ciphers.get(1) = 248 results in 0+12= 12 = 
+Plain[2]= 77, ciphers.get(2) = 215 results in 64+9= 73 = I
+    Is not possible
+q
+quitting

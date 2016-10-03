@@ -50,7 +50,6 @@ public class Decryptor {
                 String s;
                 while (true){
                     s = scanner.nextLine();
-                    System.out.println(s);
                     if (s.equals("q")){
                         System.out.println("quitting");
                         break;
@@ -138,20 +137,20 @@ public class Decryptor {
         boolean possible=true;
         int ph, pl, kh, kl, ch, cl;
         int res;
-
+System.out.println("checking the trailer");
         for (int i = 0; i < plain.length; i++) {
 
             kh=kl=0;
             ph = plain[i]>>4;
             pl = plain[i]&0x0f;
-            ch = ciphers.get(i)>>4;
-            cl = ciphers.get(i)&0x0f;
+            ch = ciphers.get(ciphers.size()-i-1)>>4;
+            cl = ciphers.get(ciphers.size()-i-1)&0x0f;
             for (int j=0; j<16;++j){
                 if(map[ph][j] == ch) kl = j;
                 if(map[pl][j] == cl) kh = j;
 
             }
-            System.out.print("Plain["+i+"]= "+plain[i]+", ciphers.get("+i+") = "+ciphers.get(i)+" results in ");
+            System.out.print("Plain["+i+"]= "+plain[i]+", ciphers.get("+(ciphers.size()-i-1)+") = "+ciphers.get(ciphers.size()-i-1)+" results in ");
             System.out.print(""+(kh<<4)+"+"+kl+"= ");
 
             //cast converts to ascii
@@ -193,7 +192,7 @@ public class Decryptor {
             try {
                 al.add(Integer.parseInt(s,16));
             }catch (NumberFormatException e){
-                System.out.println("Number format exception");
+                System.out.println("Number format exception with: \""+s+"\"");
             }
         }
         //change ArrayList<Integer> to int[]
